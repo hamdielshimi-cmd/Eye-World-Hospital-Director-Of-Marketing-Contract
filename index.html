@@ -751,12 +751,11 @@
       proposedChange: proposed
     };
 
-    fetch(BACKEND, {
-      method: 'POST',
-      mode: 'no-cors',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
-    })
+fetch(BACKEND, {
+  method: 'POST',
+  headers: { 'Content-Type': 'text/plain' },  // ← 'text/plain' bypasses preflight
+  body: JSON.stringify(payload)
+})
     .then(() => {
       msgEl.className = 'form-msg success';
       msgEl.textContent = document.documentElement.lang === 'ar'

@@ -1,9 +1,9 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Freelance Marketing Consulting Agreement — Eye World Hospital</title>
+<title>Freelance Marketing Consulting Agreement — Eye World Hospital (Final)</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
 <style>
   :root {
@@ -70,57 +70,6 @@
   .section-body { padding: 28px 32px; background: #fff; }
   .section-body p { font-size: .88rem; margin-bottom: 10px; color: #2c2c3e; }
 
-  /* ── PROPOSE EDIT BUTTON ── */
-  .propose-btn {
-    background: transparent; border: 1px solid var(--gold); color: var(--gold);
-    padding: 5px 14px; font-size: .68rem; letter-spacing: .12em; text-transform: uppercase;
-    cursor: pointer; font-family:'Jost',sans-serif; transition: all .2s;
-    display: flex; align-items: center; gap: 6px; white-space: nowrap;
-    margin-left: auto;
-  }
-  .propose-btn:hover { background: var(--gold); color: var(--navy); }
-  .propose-btn svg { width: 12px; height: 12px; }
-
-  /* ── INLINE EDIT PANEL ── */
-  .edit-panel {
-    display: none; background: #F8F4ED; border-top: 2px solid var(--gold);
-    padding: 24px 32px; animation: slideDown .25s ease;
-  }
-  .edit-panel.open { display: block; }
-  @keyframes slideDown { from { opacity:0; transform:translateY(-8px); } to { opacity:1; transform:translateY(0); } }
-  .edit-panel h4 {
-    font-family:'Cormorant Garamond',serif; font-size:1.1rem; color:var(--navy);
-    margin-bottom: 16px; display: flex; align-items: center; gap: 8px;
-  }
-  html[dir="rtl"] .edit-panel h4 { font-family:'Amiri',serif; }
-  .edit-panel h4::before { content:'✏️'; font-size:.9rem; }
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
-  .form-group { display: flex; flex-direction: column; gap: 5px; }
-  .form-group label { font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-family:'Jost',sans-serif; font-weight: 600; }
-  .form-group input, .form-group select, .form-group textarea {
-    border: 1px solid var(--border); background: #fff; padding: 9px 12px;
-    font-size: .85rem; font-family: 'Jost', sans-serif; color: var(--text);
-    outline: none; transition: border .2s; resize: vertical;
-  }
-  html[dir="rtl"] .form-group input,
-  html[dir="rtl"] .form-group select,
-  html[dir="rtl"] .form-group textarea { font-family:'Amiri',serif; }
-  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--gold); }
-  .form-actions { display: flex; gap: 10px; margin-top: 4px; }
-  .btn-submit {
-    background: var(--navy); color: var(--gold); border: none;
-    padding: 10px 26px; font-size: .78rem; letter-spacing: .1em;
-    text-transform: uppercase; cursor: pointer; font-family:'Jost',sans-serif;
-    font-weight: 600; transition: all .2s;
-  }
-  .btn-submit:hover { background: var(--gold); color: var(--navy); }
-  .btn-submit:disabled { opacity: .5; cursor: not-allowed; }
-  .btn-cancel { background: transparent; color: var(--muted); border: 1px solid var(--border); padding: 10px 20px; font-size: .78rem; cursor: pointer; font-family:'Jost',sans-serif; transition: all .2s; }
-  .btn-cancel:hover { border-color: #999; color: var(--text); }
-  .form-msg { font-size: .8rem; margin-top: 10px; padding: 8px 14px; display: none; }
-  .form-msg.success { background: #ECFDF5; color: #065F46; border: 1px solid #6EE7B7; display: block; }
-  .form-msg.error { background: #FEF2F2; color: #991B1B; border: 1px solid #FCA5A5; display: block; }
-
   /* ── CLAUSES ── */
   .clause { padding: 12px 16px 12px 20px; border-left: 3px solid var(--gold); margin-bottom: 12px; background: var(--section-bg); font-size: .86rem; color: #2c2c3e; }
   html[dir="rtl"] .clause { border-left: none; border-right: 3px solid var(--gold); padding: 12px 20px 12px 16px; }
@@ -162,18 +111,6 @@
   .sig-date { color: var(--gold-light); font-size: .78rem; margin-top: 6px; }
   .client-sig-placeholder { height: 80px; border: 1px dashed rgba(201,168,76,.4); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,.25); font-size: .75rem; letter-spacing: .1em; margin-bottom: 8px; }
 
-  /* ── EDIT NOTICE ── */
-  .edit-notice { background: #FEF3C7; border: 1px solid #F59E0B; padding: 14px 20px; margin-bottom: 30px; font-size: .82rem; display: flex; gap: 10px; align-items: flex-start; }
-
-  /* ── PENDING EDITS TRACKER ── */
-  .tracker-bar {
-    position: fixed; bottom: 0; left: 0; right: 0; z-index: 998;
-    background: var(--navy); border-top: 2px solid var(--gold);
-    padding: 10px 40px; display: flex; align-items: center; justify-content: space-between;
-  }
-  .tracker-bar span { color: rgba(255,255,255,.6); font-size: .75rem; font-family:'Jost',sans-serif; }
-  .tracker-bar .count { color: var(--gold); font-weight: 600; }
-
   /* ── FOOTER ── */
   .doc-footer { text-align: center; margin-top: 50px; margin-bottom: 60px; padding-top: 30px; border-top: 1px solid var(--border); color: var(--muted); font-size: .75rem; letter-spacing: .05em; }
   .doc-footer .gold { color: var(--gold); }
@@ -193,10 +130,9 @@
     .parties-grid, .sig-grid, .form-row { grid-template-columns: 1fr; }
     .contract-header h1 { font-size: 1.8rem; }
     .lang-bar { padding: 10px 16px; }
-    .tracker-bar { padding: 10px 16px; }
   }
   @media print {
-    .lang-bar, .edit-notice, .propose-btn, .edit-panel, .tracker-bar { display: none !important; }
+    .lang-bar { display: none !important; }
     .page { padding-top: 30px; }
   }
 </style>
@@ -215,15 +151,6 @@
 
 <div class="page">
 
-  <!-- EDIT NOTICE -->
-  <div class="edit-notice">
-    <span style="font-size:1.1rem;flex-shrink:0">✏️</span>
-    <div>
-      <span class="en-content"><strong>Review Mode Active.</strong> Both parties may propose edits, additions, or removals using the <strong>"Propose Edit"</strong> button on each section. All submissions are logged and Party A is notified immediately by email.</span>
-      <span class="ar-content"><strong>وضع المراجعة نشط.</strong> يحق لكلا الطرفين اقتراح تعديلات أو إضافات أو حذف أي بند باستخدام زر <strong>"اقتراح تعديل"</strong> في كل قسم. يتم تسجيل جميع المقترحات وإشعار الطرف الأول فوراً عبر البريد الإلكتروني.</span>
-    </div>
-  </div>
-
   <!-- HEADER -->
   <div class="contract-header">
     <div class="corner tl"></div><div class="corner tr"></div>
@@ -238,12 +165,12 @@
       <div class="meta-item">
         <span class="label en-content">Contract Date</span>
         <span class="label ar-content">تاريخ العقد</span>
-        <span class="value">___ / ___ / 2025</span>
+        <span class="value">_16__ / _03__ / 2026</span>
       </div>
       <div class="meta-item">
         <span class="label en-content">Start Date</span>
         <span class="label ar-content">تاريخ البدء</span>
-        <span class="value">___ / ___ / 2025</span>
+        <span class="value">__16_ / __03_ / 2026</span>
       </div>
       <div class="meta-item">
         <span class="label en-content">Duration</span>
@@ -282,11 +209,6 @@
       <div class="section-num">01</div>
       <h2 class="en-content">Contract Nature & Role Definition</h2>
       <h2 class="ar-content">طبيعة العقد وتعريف الدور</h2>
-      <button class="propose-btn" onclick="togglePanel('sec-01')">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
-        <span class="en-content">Propose Edit</span>
-        <span class="ar-content">اقتراح تعديل</span>
-      </button>
     </div>
     <div class="section-body">
       <div class="clause blue en-content">This is a <strong>freelance consulting contract</strong> — not an employment contract. Party A operates as an independent contractor. No employment benefits, social insurance, or fixed shift obligations apply.</div>
@@ -296,53 +218,11 @@
         <li class="ar-content"><strong>المسمى:</strong> مدير تسويق — مستشار مستقل</li>
         <li class="en-content"><strong>Reporting line:</strong> Reports directly to Prof. Dr. Ihab Saad Othman and Mrs. Soha only</li>
         <li class="ar-content"><strong>التسلسل الوظيفي:</strong> يرفع تقاريره مباشرةً إلى أ.د. إيهاب سعد عثمان والسيدة سهى فقط</li>
-        <li class="en-content"><strong>Working days:</strong> Sunday to Thursday — 6 hours per day. Fridays and Saturdays are off. Party A remains available for genuine emergencies at any time.</li>
-        <li class="ar-content"><strong>أيام العمل:</strong> من الأحد إلى الخميس — ٦ ساعات يومياً. الجمعة والسبت إجازة. يبقى الطرف الأول متاحاً في أي وقت لحالات الطوارئ الحقيقية.</li>
+        <li class="en-content"><strong>Working days:</strong> 5 business days (Sunday to Thursday). Fridays and Saturdays are off. Party A remains available for genuine emergencies at any time.</li>
+        <li class="ar-content"><strong>أيام العمل:</strong> ٥ أيام عمل (من الأحد إلى الخميس). الجمعة والسبت إجازة. يبقى الطرف الأول متاحاً في أي وقت لحالات الطوارئ الحقيقية.</li>
         <li class="en-content"><strong>External representation:</strong> Party A may represent Eye World Hospital Group as Marketing Director in external meetings, partnerships, and events when officially requested or approved by management.</li>
         <li class="ar-content"><strong>التمثيل الخارجي:</strong> يحق للطرف الأول تمثيل مجموعة مستشفى دنيا العيون بصفة مدير تسويق في الاجتماعات الخارجية والشراكات والفعاليات عند الطلب الرسمي أو الموافقة من الإدارة.</li>
       </ul>
-    </div>
-    <div class="edit-panel" id="panel-sec-01">
-      <h4 class="en-content">Propose an Edit for Section 01 — Contract Nature</h4>
-      <h4 class="ar-content">اقتراح تعديل للقسم ٠١ — طبيعة العقد</h4>
-      <div class="form-row">
-        <div class="form-group">
-          <label class="en-content">Your Name</label>
-          <label class="ar-content">اسمك</label>
-          <input type="text" class="field-name" placeholder="e.g. Mrs. Soha / السيدة سهى"/>
-        </div>
-        <div class="form-group">
-          <label class="en-content">Type of Change</label>
-          <label class="ar-content">نوع التغيير</label>
-          <select class="field-type">
-            <option value="Comment">Comment / تعليق</option>
-            <option value="Edit">Edit existing clause / تعديل بند</option>
-            <option value="Add">Add new clause / إضافة بند</option>
-            <option value="Remove">Remove clause / حذف بند</option>
-          </select>
-        </div>
-      </div>
-      <div class="form-group" style="margin-bottom:14px">
-        <label class="en-content">Which clause or text does this relate to?</label>
-        <label class="ar-content">أي بند أو نص يتعلق بهذا التعديل؟</label>
-        <input type="text" class="field-original" placeholder="Quote the clause or describe it briefly..."/>
-      </div>
-      <div class="form-group" style="margin-bottom:14px">
-        <label class="en-content">Your proposed change or comment</label>
-        <label class="ar-content">التعديل أو التعليق المقترح</label>
-        <textarea class="field-proposed" rows="4" placeholder="Describe your proposed change clearly..."></textarea>
-      </div>
-      <div class="form-actions">
-        <button class="btn-submit" onclick="submitEdit('sec-01', '01 — Contract Nature')">
-          <span class="en-content">Submit Proposal</span>
-          <span class="ar-content">إرسال المقترح</span>
-        </button>
-        <button class="btn-cancel" onclick="togglePanel('sec-01')">
-          <span class="en-content">Cancel</span>
-          <span class="ar-content">إلغاء</span>
-        </button>
-      </div>
-      <div class="form-msg" id="msg-sec-01"></div>
     </div>
   </div>
 
@@ -352,18 +232,13 @@
       <div class="section-num">02</div>
       <h2 class="en-content">Scope of Work</h2>
       <h2 class="ar-content">نطاق العمل</h2>
-      <button class="propose-btn" onclick="togglePanel('sec-02')">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
-        <span class="en-content">Propose Edit</span>
-        <span class="ar-content">اقتراح تعديل</span>
-      </button>
     </div>
     <div class="section-body">
       <p class="sub-head en-content">A — Strategic Management</p>
       <p class="sub-head ar-content">أ — الإدارة الاستراتيجية</p>
       <ul class="dot-list">
-        <li class="en-content">Develop and own the full marketing strategy across all three brands: Donya El Oyon, Dr. Ihab Authority, and Top Care</li>
-        <li class="ar-content">تطوير وامتلاك الاستراتيجية التسويقية الكاملة عبر الأذرع الثلاثة: دنيا العيون، سلطة د. إيهاب، وتوب كير</li>
+        <li class="en-content">Develop and own the full marketing strategy across all three brands: Donya El Oyon, Dr. Ihab, and Top Care</li>
+        <li class="ar-content">تطوير وامتلاك الاستراتيجية التسويقية الكاملة عبر الأذرع الثلاثة: دنيا العيون، د. إيهاب، وتوب كير</li>
         <li class="en-content">Define positioning, messaging, and brand voice for each arm independently</li>
         <li class="ar-content">تحديد التموضع والرسائل والهوية الصوتية لكل ذراع بشكل مستقل</li>
         <li class="en-content">Set quarterly and monthly marketing plans and KPIs</li>
@@ -397,8 +272,8 @@
         <li class="en-content">Oversee all paid advertising campaigns — strategy, targeting, budget allocation, and performance</li>
         <li class="ar-content">الإشراف على جميع حملات الإعلانات المدفوعة — الاستراتيجية، الاستهداف، توزيع الميزانية، والأداء</li>
       </ul>
-      <div class="clause red en-content"><strong>Urgent Publishing Rule:</strong> Any urgent publishing request must be submitted to Party A in writing at least <strong>4 business days</strong> before the required publishing date. Requests submitted with less notice are accepted at Party A's discretion only.</div>
-      <div class="clause red ar-content"><strong>قاعدة النشر العاجل:</strong> يجب تقديم أي طلب نشر عاجل للطرف الأول كتابياً قبل <strong>٤ أيام عمل</strong> على الأقل من تاريخ النشر المطلوب. الطلبات المقدمة بوقت أقل تُقبل وفق تقدير الطرف الأول فقط.</div>
+      <div class="clause red en-content"><strong>Urgent Publishing Protocol:</strong> Any urgent publishing request must be submitted to Party A in writing at least <strong>48 working hours</strong> before the required publishing date. Requests submitted with less notice may incur rush fees or be rejected at Party A's discretion.</div>
+      <div class="clause red ar-content"><strong>بروتوكول النشر العاجل:</strong> يجب تقديم أي طلب نشر عاجل للطرف الأول كتابياً قبل <strong>٤٨ ساعة عمل</strong> على الأقل من تاريخ النشر المطلوب. قد تؤدي الطلبات المقدمة بوقت أقل إلى رسوم استعجال أو الرفض وفق تقدير الطرف الأول.</div>
 
       <p class="sub-head en-content">D — Digital Presence & Website</p>
       <p class="sub-head ar-content">د — الحضور الرقمي والموقع الإلكتروني</p>
@@ -423,21 +298,6 @@
       <div class="clause en-content"><strong>NOT included in scope:</strong> Graphic design execution · Video shooting/editing · Copywriting execution · Website development · Ad spend budget · Any work outside the three agreed brands without a written addendum.</div>
       <div class="clause ar-content"><strong>خارج نطاق العمل:</strong> تنفيذ التصميم الجرافيكي · تصوير أو مونتاج الفيديو · كتابة النصوص · تطوير الموقع · الإنفاق الإعلاني · أي عمل خارج الأذرع الثلاثة دون ملحق كتابي.</div>
     </div>
-    <div class="edit-panel" id="panel-sec-02">
-      <h4 class="en-content">Propose an Edit for Section 02 — Scope of Work</h4>
-      <h4 class="ar-content">اقتراح تعديل للقسم ٠٢ — نطاق العمل</h4>
-      <div class="form-row">
-        <div class="form-group"><label class="en-content">Your Name</label><label class="ar-content">اسمك</label><input type="text" class="field-name" placeholder="e.g. Mrs. Soha"/></div>
-        <div class="form-group"><label class="en-content">Type of Change</label><label class="ar-content">نوع التغيير</label><select class="field-type"><option value="Comment">Comment / تعليق</option><option value="Edit">Edit / تعديل</option><option value="Add">Add / إضافة</option><option value="Remove">Remove / حذف</option></select></div>
-      </div>
-      <div class="form-group" style="margin-bottom:14px"><label class="en-content">Which clause does this relate to?</label><label class="ar-content">أي بند يتعلق بهذا؟</label><input type="text" class="field-original" placeholder="Quote or describe the clause..."/></div>
-      <div class="form-group" style="margin-bottom:14px"><label class="en-content">Your proposed change or comment</label><label class="ar-content">التعديل أو التعليق المقترح</label><textarea class="field-proposed" rows="4" placeholder="Describe your proposed change clearly..."></textarea></div>
-      <div class="form-actions">
-        <button class="btn-submit" onclick="submitEdit('sec-02','02 — Scope of Work')"><span class="en-content">Submit Proposal</span><span class="ar-content">إرسال المقترح</span></button>
-        <button class="btn-cancel" onclick="togglePanel('sec-02')"><span class="en-content">Cancel</span><span class="ar-content">إلغاء</span></button>
-      </div>
-      <div class="form-msg" id="msg-sec-02"></div>
-    </div>
   </div>
 
   <!-- ═══════════════ SECTION 03 ═══════════════ -->
@@ -446,10 +306,6 @@
       <div class="section-num">03</div>
       <h2 class="en-content">Financial Terms & Payment</h2>
       <h2 class="ar-content">الشروط المالية والدفع</h2>
-      <button class="propose-btn" onclick="togglePanel('sec-03')">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
-        <span class="en-content">Propose Edit</span><span class="ar-content">اقتراح تعديل</span>
-      </button>
     </div>
     <div class="section-body">
       <table class="fin-table">
@@ -483,21 +339,6 @@
       <div class="clause green en-content">At the end of Month 3, both parties agree to review and adjust the compensation for Months 4–6 based on performance and results.</div>
       <div class="clause green ar-content">في نهاية الشهر الثالث، يتفق الطرفان على مراجعة وتعديل التعويض للأشهر من الرابع إلى السادس بناءً على الأداء والنتائج.</div>
     </div>
-    <div class="edit-panel" id="panel-sec-03">
-      <h4 class="en-content">Propose an Edit for Section 03 — Financial Terms</h4>
-      <h4 class="ar-content">اقتراح تعديل للقسم ٠٣ — الشروط المالية</h4>
-      <div class="form-row">
-        <div class="form-group"><label class="en-content">Your Name</label><label class="ar-content">اسمك</label><input type="text" class="field-name" placeholder="e.g. Mrs. Soha"/></div>
-        <div class="form-group"><label class="en-content">Type of Change</label><label class="ar-content">نوع التغيير</label><select class="field-type"><option value="Comment">Comment / تعليق</option><option value="Edit">Edit / تعديل</option><option value="Add">Add / إضافة</option><option value="Remove">Remove / حذف</option></select></div>
-      </div>
-      <div class="form-group" style="margin-bottom:14px"><label class="en-content">Which clause does this relate to?</label><label class="ar-content">أي بند يتعلق بهذا؟</label><input type="text" class="field-original" placeholder="Quote or describe the clause..."/></div>
-      <div class="form-group" style="margin-bottom:14px"><label class="en-content">Your proposed change or comment</label><label class="ar-content">التعديل أو التعليق المقترح</label><textarea class="field-proposed" rows="4" placeholder="Describe your proposed change clearly..."></textarea></div>
-      <div class="form-actions">
-        <button class="btn-submit" onclick="submitEdit('sec-03','03 — Financial Terms')"><span class="en-content">Submit Proposal</span><span class="ar-content">إرسال المقترح</span></button>
-        <button class="btn-cancel" onclick="togglePanel('sec-03')"><span class="en-content">Cancel</span><span class="ar-content">إلغاء</span></button>
-      </div>
-      <div class="form-msg" id="msg-sec-03"></div>
-    </div>
   </div>
 
   <!-- ═══════════════ SECTION 04 ═══════════════ -->
@@ -506,10 +347,6 @@
       <div class="section-num">04</div>
       <h2 class="en-content">Mutual Obligations</h2>
       <h2 class="ar-content">الالتزامات المتبادلة</h2>
-      <button class="propose-btn" onclick="togglePanel('sec-04')">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
-        <span class="en-content">Propose Edit</span><span class="ar-content">اقتراح تعديل</span>
-      </button>
     </div>
     <div class="section-body">
       <p class="sub-head en-content">Party A — Consultant Obligations</p>
@@ -549,21 +386,6 @@
       <div class="clause green en-content">The client may terminate immediately without notice if Party A: shares confidential data with third parties; directly and materially damages the hospital's reputation; or abandons agreed services for more than 30 consecutive days without written justification.</div>
       <div class="clause green ar-content">يحق للعميل الإنهاء الفوري دون إشعار إذا قام الطرف الأول بـ: مشاركة بيانات سرية مع أطراف ثالثة؛ الإضرار المباشر والجوهري بسمعة المستشفى؛ أو التوقف عن تقديم الخدمات لأكثر من ٣٠ يوماً متتالياً دون مبرر كتابي.</div>
     </div>
-    <div class="edit-panel" id="panel-sec-04">
-      <h4 class="en-content">Propose an Edit for Section 04 — Mutual Obligations</h4>
-      <h4 class="ar-content">اقتراح تعديل للقسم ٠٤ — الالتزامات المتبادلة</h4>
-      <div class="form-row">
-        <div class="form-group"><label class="en-content">Your Name</label><label class="ar-content">اسمك</label><input type="text" class="field-name" placeholder="e.g. Mrs. Soha"/></div>
-        <div class="form-group"><label class="en-content">Type of Change</label><label class="ar-content">نوع التغيير</label><select class="field-type"><option value="Comment">Comment / تعليق</option><option value="Edit">Edit / تعديل</option><option value="Add">Add / إضافة</option><option value="Remove">Remove / حذف</option></select></div>
-      </div>
-      <div class="form-group" style="margin-bottom:14px"><label class="en-content">Which clause does this relate to?</label><label class="ar-content">أي بند يتعلق بهذا؟</label><input type="text" class="field-original" placeholder="Quote or describe the clause..."/></div>
-      <div class="form-group" style="margin-bottom:14px"><label class="en-content">Your proposed change or comment</label><label class="ar-content">التعديل أو التعليق المقترح</label><textarea class="field-proposed" rows="4" placeholder="Describe your proposed change clearly..."></textarea></div>
-      <div class="form-actions">
-        <button class="btn-submit" onclick="submitEdit('sec-04','04 — Mutual Obligations')"><span class="en-content">Submit Proposal</span><span class="ar-content">إرسال المقترح</span></button>
-        <button class="btn-cancel" onclick="togglePanel('sec-04')"><span class="en-content">Cancel</span><span class="ar-content">إلغاء</span></button>
-      </div>
-      <div class="form-msg" id="msg-sec-04"></div>
-    </div>
   </div>
 
   <!-- ═══════════════ SECTION 05 ═══════════════ -->
@@ -572,10 +394,6 @@
       <div class="section-num">05</div>
       <h2 class="en-content">Intellectual Property & Confidentiality</h2>
       <h2 class="ar-content">الملكية الفكرية والسرية</h2>
-      <button class="propose-btn" onclick="togglePanel('sec-05')">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
-        <span class="en-content">Propose Edit</span><span class="ar-content">اقتراح تعديل</span>
-      </button>
     </div>
     <div class="section-body">
       <ul class="dot-list">
@@ -591,21 +409,6 @@
         <li class="ar-content">لا يجوز لأي طرف الإفصاح عن الشروط المالية أو البيانات الشخصية للطرف الآخر لأطراف ثالثة</li>
       </ul>
     </div>
-    <div class="edit-panel" id="panel-sec-05">
-      <h4 class="en-content">Propose an Edit for Section 05 — IP & Confidentiality</h4>
-      <h4 class="ar-content">اقتراح تعديل للقسم ٠٥ — الملكية الفكرية والسرية</h4>
-      <div class="form-row">
-        <div class="form-group"><label class="en-content">Your Name</label><label class="ar-content">اسمك</label><input type="text" class="field-name" placeholder="e.g. Mrs. Soha"/></div>
-        <div class="form-group"><label class="en-content">Type of Change</label><label class="ar-content">نوع التغيير</label><select class="field-type"><option value="Comment">Comment / تعليق</option><option value="Edit">Edit / تعديل</option><option value="Add">Add / إضافة</option><option value="Remove">Remove / حذف</option></select></div>
-      </div>
-      <div class="form-group" style="margin-bottom:14px"><label class="en-content">Which clause does this relate to?</label><label class="ar-content">أي بند يتعلق بهذا؟</label><input type="text" class="field-original" placeholder="Quote or describe the clause..."/></div>
-      <div class="form-group" style="margin-bottom:14px"><label class="en-content">Your proposed change or comment</label><label class="ar-content">التعديل أو التعليق المقترح</label><textarea class="field-proposed" rows="4" placeholder="Describe your proposed change clearly..."></textarea></div>
-      <div class="form-actions">
-        <button class="btn-submit" onclick="submitEdit('sec-05','05 — IP & Confidentiality')"><span class="en-content">Submit Proposal</span><span class="ar-content">إرسال المقترح</span></button>
-        <button class="btn-cancel" onclick="togglePanel('sec-05')"><span class="en-content">Cancel</span><span class="ar-content">إلغاء</span></button>
-      </div>
-      <div class="form-msg" id="msg-sec-05"></div>
-    </div>
   </div>
 
   <!-- ═══════════════ SECTION 06 ═══════════════ -->
@@ -614,43 +417,24 @@
       <div class="section-num">06</div>
       <h2 class="en-content">Contract Duration & Termination</h2>
       <h2 class="ar-content">مدة العقد والإنهاء</h2>
-      <button class="propose-btn" onclick="togglePanel('sec-06')">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
-        <span class="en-content">Propose Edit</span><span class="ar-content">اقتراح تعديل</span>
-      </button>
     </div>
     <div class="section-body">
       <div class="clause blue en-content">This contract is effective for an initial term of <strong>6 months</strong> from the start date. Compensation is reviewed at Month 3. Renewable by mutual written agreement.</div>
       <div class="clause blue ar-content">يسري هذا العقد لمدة أولية <strong>٦ أشهر</strong> من تاريخ البدء. يُراجع التعويض في الشهر الثالث. قابل للتجديد باتفاق كتابي متبادل.</div>
       <ul class="dot-list">
-        <li class="en-content"><strong>Standard termination:</strong> Either party may terminate with <strong>30 days written notice</strong> (WhatsApp with read receipt or email is accepted)</li>
-        <li class="ar-content"><strong>الإنهاء العادي:</strong> يحق لأي طرف الإنهاء بـ<strong>إشعار كتابي ٣٠ يوماً</strong> (رسالة واتساب مع قراءة مؤكدة أو بريد إلكتروني مقبول)</li>
+        <li class="en-content"><strong>Standard termination:</strong> Either party may terminate with <strong>30 days written notice</strong> (WhatsApp with read receipt or email is accepted) sent to <strong>01001201201 or 01000371770</strong>.</li>
+        <li class="ar-content"><strong>الإنهاء العادي:</strong> يحق لأي طرف الإنهاء بـ<strong>إشعار كتابي ٣٠ يوماً</strong> (رسالة واتساب مع قراءة مؤكدة أو بريد إلكتروني مقبول) يُرسل إلى <strong>٠١٠٠١٢٠١٢٠١ أو ٠١٠٠٠٣٧١٧٧٠</strong>.</li>
         <li class="en-content">Both parties continue obligations normally during the notice period</li>
         <li class="ar-content">يستمر كلا الطرفين في التزاماتهم خلال فترة الإشعار</li>
         <li class="en-content"><strong>Upon termination:</strong> All outstanding invoices paid within 7 days. Party A delivers all files, access credentials, and assets within 7 days.</li>
         <li class="ar-content"><strong>عند الإنهاء:</strong> تُدفع جميع الفواتير المستحقة خلال ٧ أيام. يسلّم الطرف الأول جميع الملفات وصلاحيات الدخول والأصول خلال ٧ أيام.</li>
         <li class="en-content"><strong>Immediate termination by Party A:</strong> Late payment exceeding 15 business days, or request to perform illegal/unethical actions</li>
         <li class="ar-content"><strong>الإنهاء الفوري من الطرف الأول:</strong> تأخر الدفع أكثر من ١٥ يوم عمل، أو طلب القيام بأعمال غير قانونية أو غير أخلاقية</li>
-        <li class="en-content"><strong>Immediate termination by Party B:</strong> Confidentiality breach, direct reputation damage, or abandonment of duties for 30+ days without justification</li>
-        <li class="ar-content"><strong>الإنهاء الفوري من الطرف الثاني:</strong> خرق السرية، الإضرار المباشر بالسمعة، أو التخلي عن المهام لأكثر من ٣٠ يوماً دون مبرر</li>
+        <li class="en-content"><strong>Immediate termination by Party B:</strong> Confidentiality breach, direct reputation damage, or abandonment of duties for <strong>15 days</strong> without justification.</li>
+        <li class="ar-content"><strong>الإنهاء الفوري من الطرف الثاني:</strong> خرق السرية، الإضرار المباشر بالسمعة، أو التخلي عن المهام لأكثر من <strong>١٥ يوماً</strong> دون مبرر.</li>
         <li class="en-content">Any unresolved disputes are subject to competent Egyptian courts in Cairo</li>
         <li class="ar-content">أي نزاعات غير محسومة تخضع للمحاكم المصرية المختصة في القاهرة</li>
       </ul>
-    </div>
-    <div class="edit-panel" id="panel-sec-06">
-      <h4 class="en-content">Propose an Edit for Section 06 — Termination</h4>
-      <h4 class="ar-content">اقتراح تعديل للقسم ٠٦ — الإنهاء</h4>
-      <div class="form-row">
-        <div class="form-group"><label class="en-content">Your Name</label><label class="ar-content">اسمك</label><input type="text" class="field-name" placeholder="e.g. Mrs. Soha"/></div>
-        <div class="form-group"><label class="en-content">Type of Change</label><label class="ar-content">نوع التغيير</label><select class="field-type"><option value="Comment">Comment / تعليق</option><option value="Edit">Edit / تعديل</option><option value="Add">Add / إضافة</option><option value="Remove">Remove / حذف</option></select></div>
-      </div>
-      <div class="form-group" style="margin-bottom:14px"><label class="en-content">Which clause does this relate to?</label><label class="ar-content">أي بند يتعلق بهذا؟</label><input type="text" class="field-original" placeholder="Quote or describe the clause..."/></div>
-      <div class="form-group" style="margin-bottom:14px"><label class="en-content">Your proposed change or comment</label><label class="ar-content">التعديل أو التعليق المقترح</label><textarea class="field-proposed" rows="4" placeholder="Describe your proposed change clearly..."></textarea></div>
-      <div class="form-actions">
-        <button class="btn-submit" onclick="submitEdit('sec-06','06 — Duration & Termination')"><span class="en-content">Submit Proposal</span><span class="ar-content">إرسال المقترح</span></button>
-        <button class="btn-cancel" onclick="togglePanel('sec-06')"><span class="en-content">Cancel</span><span class="ar-content">إلغاء</span></button>
-      </div>
-      <div class="form-msg" id="msg-sec-06"></div>
     </div>
   </div>
 
@@ -667,8 +451,7 @@
         </div>
         <div class="sig-label en-content">Electronic Signature</div>
         <div class="sig-label ar-content">التوقيع الإلكتروني</div>
-        <div class="sig-date en-content">Date: ___ / ___ / 2025</div>
-        <div class="sig-date ar-content">التاريخ: ___ / ___ / ٢٠٢٥</div>
+<div class="sig-date en-content">Date: __16_ / _03__ / 2026</div>        <div class="sig-date ar-content">التاريخ: _١٦__ / __٠٣_ / ٢٠٢٦</div>v>
       </div>
       <div class="sig-box">
         <div class="party-name en-content">Party B — Client<br/><small style="color:rgba(255,255,255,.5);font-size:.8rem">Eye World Hospital — Mrs. Soha</small></div>
@@ -677,8 +460,8 @@
         <div class="client-sig-placeholder ar-content">توقيع العميل</div>
         <div class="sig-label en-content">Authorized Signatory — Mrs. Soha</div>
         <div class="sig-label ar-content">المفوضة بالتوقيع — السيدة سهى</div>
-        <div class="sig-date en-content">Date: ___ / ___ / 2025</div>
-        <div class="sig-date ar-content">التاريخ: ___ / ___ / ٢٠٢٥</div>
+        <div class="sig-date en-content">Date: ___ / ___ / 2026</div>
+        <div class="sig-date ar-content">التاريخ: ___ / ___ / ٢٠٢٦</div>
       </div>
     </div>
   </div>
@@ -690,99 +473,14 @@
 
 </div>
 
-<!-- TRACKER BAR -->
-<div class="tracker-bar">
-  <span class="en-content">Proposed edits submitted: <span class="count" id="edit-count">0</span></span>
-  <span class="ar-content">المقترحات المُرسَلة: <span class="count" id="edit-count-ar">0</span></span>
-  <span style="color:var(--gold);font-size:.7rem;font-family:'Jost',sans-serif;" class="en-content">All edits logged & emailed to Party A instantly</span>
-  <span style="color:var(--gold);font-size:.7rem;font-family:'Jost',sans-serif;" class="ar-content">جميع التعديلات مسجلة وتُرسل فوراً للطرف الأول</span>
-</div>
-
 <script>
-  const BACKEND = "https://script.google.com/macros/s/AKfycbxiND1Cr_X_MpvdinPTxLeKvrNdy1KFcPn6ODJ8wq0n5-WDw9WrrLjMDQsGakO4hsczBA/exec";
-  let totalEdits = 0;
-
+  // Minimal script for Language Toggling only (Read-only mode)
   function setLang(lang, btn) {
     const html = document.documentElement;
     html.setAttribute('lang', lang);
     html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
     document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-  }
-
-  function togglePanel(secId) {
-    const panel = document.getElementById('panel-' + secId);
-    const isOpen = panel.classList.contains('open');
-    // Close all panels first
-    document.querySelectorAll('.edit-panel').forEach(p => p.classList.remove('open'));
-    if (!isOpen) {
-      panel.classList.add('open');
-      panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    }
-  }
-
-  function submitEdit(secId, sectionName) {
-    const panel = document.getElementById('panel-' + secId);
-    const name = panel.querySelector('.field-name').value.trim();
-    const type = panel.querySelector('.field-type').value;
-    const original = panel.querySelector('.field-original').value.trim();
-    const proposed = panel.querySelector('.field-proposed').value.trim();
-    const msgEl = document.getElementById('msg-' + secId);
-    const btn = panel.querySelector('.btn-submit');
-
-    if (!name || !proposed) {
-      msgEl.className = 'form-msg error';
-      msgEl.textContent = document.documentElement.lang === 'ar'
-        ? '⚠ يرجى إدخال اسمك والتعديل المقترح على الأقل.'
-        : '⚠ Please enter your name and proposed change at minimum.';
-      return;
-    }
-
-    btn.disabled = true;
-    btn.textContent = document.documentElement.lang === 'ar' ? 'جارٍ الإرسال...' : 'Sending...';
-    msgEl.className = 'form-msg';
-    msgEl.style.display = 'none';
-
-    const payload = {
-      submittedBy: name,
-      section: sectionName,
-      type: type,
-      originalText: original || '—',
-      proposedChange: proposed
-    };
-
-fetch(BACKEND, {
-  method: 'POST',
-  headers: { 'Content-Type': 'text/plain' },  // ← 'text/plain' bypasses preflight
-  body: JSON.stringify(payload)
-})
-    .then(() => {
-      msgEl.className = 'form-msg success';
-      msgEl.textContent = document.documentElement.lang === 'ar'
-        ? '✅ تم إرسال المقترح بنجاح. سيتم إشعار الطرف الأول فوراً.'
-        : '✅ Proposal submitted successfully. Party A has been notified.';
-      panel.querySelector('.field-name').value = '';
-      panel.querySelector('.field-original').value = '';
-      panel.querySelector('.field-proposed').value = '';
-      panel.querySelector('.field-type').selectedIndex = 0;
-      totalEdits++;
-      document.getElementById('edit-count').textContent = totalEdits;
-      document.getElementById('edit-count-ar').textContent = totalEdits;
-      btn.disabled = false;
-      btn.innerHTML = document.documentElement.lang === 'ar'
-        ? '<span class="ar-content">إرسال المقترح</span>'
-        : '<span class="en-content">Submit Proposal</span>';
-    })
-    .catch(() => {
-      msgEl.className = 'form-msg error';
-      msgEl.textContent = document.documentElement.lang === 'ar'
-        ? '❌ حدث خطأ. يرجى المحاولة مرة أخرى أو التواصل مباشرة.'
-        : '❌ An error occurred. Please try again or contact Party A directly.';
-      btn.disabled = false;
-      btn.innerHTML = document.documentElement.lang === 'ar'
-        ? '<span class="ar-content">إرسال المقترح</span>'
-        : '<span class="en-content">Submit Proposal</span>';
-    });
   }
 </script>
 </body>
